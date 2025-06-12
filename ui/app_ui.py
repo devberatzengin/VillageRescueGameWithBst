@@ -77,9 +77,9 @@ class GameApp:
         map_window.title("Harita ve Kurtarma Gereksinimleri")
 
         requirements = {
-            "Hilal": ["Buyu Kitabi", "Ok"],
-            "Alsancak": ["İksir", "Yay"],
-            "Halkapinar": ["Balta", "Kalkan"]
+            "Hilal": ["Lav", "Kalkan"],
+            "Alsancak": ["Kazma", "TNT"],
+            "Halkapinar": ["CakmakTasi", "KizilTas"]
         }
 
         all_villages = self.game.rescued_villages + [v.name for v in self.game.village_queue.list_villages()]

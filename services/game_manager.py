@@ -17,13 +17,13 @@ class GameManager:
 
     def setup_villages(self):
         villages = [
-            Village("Inkilap", [Item("Kilic", 10), Item("Yiyecek", 5), Item("Harita", 3)]),
-            Village("Kosu", [Item("Balta", 12), Item("İksir", 8), Item("Altin", 7)]),
-            Village("Sirinyer", [Item("Bicak", 9), Item("Kalkan", 11), Item("Mizrak", 10)]),
-            Village("Kemer", [Item("Tuzak", 6), Item("Fener", 4), Item("Yay", 9)]),
-            Village("Hilal", [Item("Kalkan", 11), Item("İksir", 8), Item("BuyuKitabi", 15)]),
-            Village("Alsancak", [Item("Merhem", 5), Item("Tuz", 2), Item("Tirpan", 11)]),
-            Village("Halkapinar", [Item("İksir", 8), Item("Balta", 12), Item("Ok", 7)])
+            Village("Inkilap", [Item("Lav", 10), Item("Kilic", 10), Item("OK", 7)]),
+            Village("Kosu", [Item("Yay", 8), Item("Kalkan", 11), Item("Elmas", 10)]),
+            Village("Sirinyer", [Item("Kazma", 9), Item("Cubuk", 4), Item("Altin", 7)]),
+            Village("Kemer", [Item("Demir", 6), Item("Kurek", 5), Item("Harita", 3)]),
+            Village("Hilal", [Item("Kalkan", 11), Item("Lav", 10), Item("TNT", 9)]),
+            Village("Alsancak", [Item("Kazma", 9), Item("TNT", 8), Item("Elma", 6)]),
+            Village("Halkapinar", [Item("CakmakTasi", 5), Item("Mesale", 4), Item("KizilTas", 3)])
         ]
         for v in villages:
             self.village_queue.enqueue(v)
@@ -42,9 +42,9 @@ class GameManager:
             return None
 
         requirements = {
-            "Hilal": ["BuyuKitabi", "Ok"],
-            "Alsancak": ["İksir", "Yay"],
-            "Halkapinar": ["Balta", "Kalkan"]
+            "Hilal": ["Lav", "Kalkan"],
+            "Alsancak": ["Kazma", "TNT"],
+            "Halkapinar": ["CakmakTasi", "KizilTas"]
         }
 
         if village.name in requirements:
